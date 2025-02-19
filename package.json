@@ -10,7 +10,8 @@
     "prestart": "npm run build",
     "start": "node .",
     "test": "jest",
-    "format": "prettier \"src/**/*.ts\" --write --loglevel warn"
+    "format": "prettier \"src/**/*.ts\" --write --loglevel warn",
+    "script": "ts-node ./scripts/seed.ts"
   },
   "author": "Anesh Gupta <anesh.gupta25@gmail.com>",
   "license": "MIT",

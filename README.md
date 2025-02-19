@@ -8,7 +8,7 @@ IOT backend service is used to manage the run time iot sensor data management.
 Clone the project
 
 ```bash
-  git clone http://10.13.0.66:7990/scm/cwp/nextgen-user-profile-ms.git
+  git clone https://github.com/aneshgupta/iot-backend.git
 ```
 
 Go to the project directory
@@ -29,6 +29,11 @@ Start the server
   npm start
 ```
 
+For Seed data
+
+```bash
+  npm run script
+```
 
 ## Build Locally
 First generate build
@@ -38,7 +43,7 @@ First generate build
 
 Then, run build
 ```bash
-  docker run -p 3000:3000 iot-backend
+  docker run -p 5000:5000 iot-backend
 ```
 
 ## Authors

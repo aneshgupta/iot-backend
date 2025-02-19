@@ -3,6 +3,7 @@ COPY ./ /app/
 WORKDIR /app
 RUN npm install
 RUN npm run build 
+RUN npm run script
 
 FROM node:18.20.3-slim
 COPY --from=builder /app/ /app/

@@ -84,7 +84,7 @@ const startApolloServer = async () => {
         });
 
         // START MOCK SENSOR DATA
-        // require('./mock');
+        require('./mock');
     } catch (error) {
         logger.error('Error in starting server: ', error);
         process.exit(1); // Exit the process with a failure code

@@ -1,0 +1,24 @@
+scalar Date
+
+type SensorData {
+    _id: ID
+    temperature: Float
+    humidity: Int
+    powerUsage: Float
+    createdOn: Date
+}
+
+type Query {
+    getSensorData: [SensorData]
+    getLatestSensorData: SensorData
+}
+
+input SensorDataInput {
+    temperature: Float!
+    humidity: Int!
+    powerUsage: Float!
+}
+
+type Mutation {
+    createSensorData(sensorDataInput: SensorDataInput!): SensorData
+}

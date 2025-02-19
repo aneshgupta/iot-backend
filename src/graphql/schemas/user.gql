@@ -1,0 +1,43 @@
+scalar Date
+
+enum UserRole {
+    ADMIN
+    USER
+}
+
+type User {
+    _id: ID
+    role: UserRole
+    email: String
+    password: String
+    isActive: Boolean
+    createdBy: String
+    createdOn: Date
+    modifiedBy: String
+    modifiedOn: Date
+}
+
+type Query {
+    getUsers: [User]
+}
+
+input UserInput {
+    role: UserRole!
+    email: String!
+    password: String!
+}
+
+input LoginInput {
+    email: String!
+    password: String!
+}
+
+type Login {
+    token: ID
+}
+
+type Mutation {
+    createUser(userInput: UserInput!): User
+    login(loginInput: LoginInput!): Login
+    deleteUser(userId: String): User
+}
